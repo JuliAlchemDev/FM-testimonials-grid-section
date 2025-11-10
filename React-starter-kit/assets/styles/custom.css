@@ -1,0 +1,121 @@
+:root {
+  /*  ================================
+   LAYOUTS & MEDIA QUERIES:
+    - Mobile: 375px
+    - Tablet: 768px -> @media (min-width: 48rem) {}
+    - Desktop: 1440px -> @media (min-width: 90rem) {}
+   ================================ */
+
+  /* ================================
+   COLORS
+
+   - Add your custom palette here
+   - Keep the primary / neutral / basic color division
+   ================================ */
+
+  /* Primary */
+  --clr-primary-blue-200: hsl(193, 38%, 86%);
+  --clr-primary-green-300: hsl(150, 100%, 66%);
+
+  /* Neutral  */
+
+  --clr-neutral-blue-600: hsl(217, 19%, 38%);
+  --clr-neutral-blue-900: hsl(217, 19%, 24%);
+  --clr-neutral-blue-950: hsl(218, 23%, 16%);
+
+  /* Basic */
+
+  --clr-basic-white: hsl(0, 100%, 100%);
+  --clr-basic-black: hsl(0, 0%, 0%);
+
+  /* ================================
+   SPACING
+
+    - Clean up or extend spacing tokens as needed
+    - Keep consistent incremental scale (0, 100, 200, 300…)
+    - Add new values specific to the project if required
+   ================================ */
+
+  --spacing-0: 0; /* 0 */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+
+  /* ================================
+   TYPOGRAPHY
+
+    - Important: always include fallback font families
+    - Recommended fallbacks: sans-serif / serif
+   ================================ */
+
+  --ff-base: "Manrope", sans-serif;
+
+  /* ================================
+   FONT WEIGHTS
+
+    - Clean up or extend core weight tokens as needed
+    - Add new values specific to the project if required
+   ================================ */
+
+  --fw-extra-bold: 800;
+
+  /* ================================
+   LETTER SPACING
+
+   - Define none / tight / loose presets
+   - Use rem units for better scaling across sizes
+   ================================ */
+
+  --ls-tight: -0.02rem; /* -0.3px */
+  --ls-loose: 0.25rem; /* 4px */
+
+  /* ================================
+   FONT SIZES
+
+   - Match naming to your design tool (e.g., Figma presets)
+   - Use relative units for responsive scaling
+   - Add project-specific values as needed
+   ================================ */
+
+  --fs-preset-1: 1.75rem; /* 28px */
+  --fs-preset-2: 1.5rem; /* 24px */
+  --fs-preset-3: 0.8rem; /* 13px */
+
+  /* ================================
+   LINE HEIGHTS
+   
+   - Keep ratios (1.35 / 1.5 / 1.6) consistent with typography scale
+   - Adjust per component type if necessary
+   ================================ */
+
+  --lh-135: 1.35;
+}
+
+/* ================================
+   FONT DECLARATIONS
+
+   - Define custom fonts used in this project
+   - .woff2 files can be downloaded from:
+     https://gwfh.mranftl.com/fonts
+   - Use `font-display: swap` for better performance
+   ================================ */
+
+/* manrope-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/manrope-v20-latin/manrope-v20-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* manrope-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/manrope-v20-latin/manrope-v20-latin-800.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
