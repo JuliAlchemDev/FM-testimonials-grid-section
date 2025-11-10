@@ -14,14 +14,18 @@
    ================================ */
 
   /* Primary */
-  --clr-primary-blue-200: hsl(193, 38%, 86%);
-  --clr-primary-green-300: hsl(150, 100%, 66%);
+--clr-primary-purple-50: hsl(260, 100%, 95%);
+--clr-primary-purple-300: hsl(264, 82%, 80%);
+--clr-primary-purple-500: hsl(263, 55%, 52%);
 
   /* Neutral  */
+--clr-neutral-grey-100: hsl(214, 17%, 92%);
+--clr-neutral-grey-200: hsl(0, 0%, 81%);
+--clr-neutral-grey-400: hsl(224, 10%, 45%);
+--clr-neutral-grey-500: hsl(217, 19%, 35%);
 
-  --clr-neutral-blue-600: hsl(217, 19%, 38%);
-  --clr-neutral-blue-900: hsl(217, 19%, 24%);
-  --clr-neutral-blue-950: hsl(218, 23%, 16%);
+  /* Dark */
+  -clr-dark-blue: hsl(219, 29%, 14%);
 
   /* Basic */
 
@@ -33,10 +37,11 @@
 
     - Clean up or extend spacing tokens as needed
     - Keep consistent incremental scale (0, 100, 200, 300…)
-    - Add new values specific to the project if required
+    - Add new values specific to the project if required (https://elementor.com/blog/px-to-rem/)
    ================================ */
 
-  --spacing-0: 0; /* 0 */
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
   --spacing-200: 1rem; /* 16px */
   --spacing-300: 1.5rem; /* 24px */
   --spacing-400: 2rem; /* 32px */
@@ -49,7 +54,7 @@
     - Recommended fallbacks: sans-serif / serif
    ================================ */
 
-  --ff-base: "Manrope", sans-serif;
+  --ff-base: 'Barlow Semi Condensed', sans-serif;
 
   /* ================================
    FONT WEIGHTS
@@ -58,7 +63,10 @@
     - Add new values specific to the project if required
    ================================ */
 
-  --fw-extra-bold: 800;
+
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
 
   /* ================================
    LETTER SPACING
@@ -67,8 +75,8 @@
    - Use rem units for better scaling across sizes
    ================================ */
 
-  --ls-tight: -0.02rem; /* -0.3px */
-  --ls-loose: 0.25rem; /* 4px */
+  --ls-none: 0; /* 0 */
+ 
 
   /* ================================
    FONT SIZES
@@ -78,9 +86,9 @@
    - Add project-specific values as needed
    ================================ */
 
-  --fs-preset-1: 1.75rem; /* 28px */
-  --fs-preset-2: 1.5rem; /* 24px */
-  --fs-preset-3: 0.8rem; /* 13px */
+  --fs-preset-1: 1.25rem; /* 20px */
+  --fs-preset-2-3: 0.8rem; /* 13px */
+  --fs-preset-4:  0.7rem; /* 11px */
 
   /* ================================
    LINE HEIGHTS
@@ -89,7 +97,9 @@
    - Adjust per component type if necessary
    ================================ */
 
-  --lh-135: 1.35;
+  --lh-110: 1.1;
+  --lh-120: 1.2;
+  --lh-140: 1.4;
 }
 
 /* ================================
@@ -101,21 +111,27 @@
    - Use `font-display: swap` for better performance
    ================================ */
 
-/* manrope-regular - latin */
+/* barlow-semi-condensed-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Manrope";
+  font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/manrope-v20-latin/manrope-v20-latin-regular.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/barlow-semi-condensed-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* manrope-800 - latin */
+/* barlow-semi-condensed-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Manrope";
+  font-family: 'Barlow Semi Condensed';
   font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/manrope-v20-latin/manrope-v20-latin-800.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-weight: 500;
+  src: url('../fonts/barlow-semi-condensed-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-semi-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/barlow-semi-condensed-v16-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
