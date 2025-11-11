@@ -32,11 +32,11 @@ export const App = () => {
           <section key={index} className="testimonials-grid__card">
             <header className="testimonials-grid__card-header">
               <img
-              className="testimonials-grid__card-header__image"
+              className="testimonials-grid__card-header__avatar"
               src={imageSource}
               alt={name}
-              width='56'
-              height='56'
+              width='28'
+              height='28'
             />
 
             <h2 className="testimonials-grid__card-header__name">{name}</h2>

@@ -21,11 +21,12 @@
   /* Neutral  */
 --clr-neutral-grey-100: hsl(214, 17%, 92%);
 --clr-neutral-grey-200: hsl(0, 0%, 81%);
+--clr-neutral-grey-300: hsl(215, 10%, 67%);
 --clr-neutral-grey-400: hsl(224, 10%, 45%);
 --clr-neutral-grey-500: hsl(217, 19%, 35%);
 
   /* Dark */
-  -clr-dark-blue: hsl(219, 29%, 14%);
+  --clr-dark-blue: hsl(219, 29%, 14%);
 
   /* Basic */
 
@@ -125,7 +126,7 @@
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/barlow-semi-condensed-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/barlow-semi-condensed-v16-latin/barlow-semi-condensed-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* barlow-semi-condensed-600 - latin */
 @font-face {
@@ -133,5 +134,5 @@
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/barlow-semi-condensed-v16-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/barlow-semi-condensed-v16-latin/barlow-semi-condensed-v16-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }

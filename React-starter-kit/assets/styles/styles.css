@@ -1,0 +1,174 @@
+body {
+    background-color: #F6F5F6;
+  margin: 2rem;
+}
+.testimonials-grid {
+  --grid-gap: var(--spacing-400);
+  display: grid;
+  place-items: center;
+  gap: var(--grid-gap); /*32px*/
+  font-family: var(--ff-base);
+  letter-spacing: var(--ls-none);
+}
+/*  General */
+.testimonials-grid__card {
+  --card-gap: var(--spacing-200);
+
+  background-color: var(--clr-neutral-grey-500);
+  padding: var(--spacing-400); /*32px*/
+
+  display: grid;
+  gap: var(--card-gap);
+  text-align: start;
+  border-radius: 8px;
+
+  /* Shadow */
+
+  box-shadow: 40px 60px 50px -47px hsla(217, 44%, 35%, 0.24);
+}
+
+.testimonials-grid__card-header {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: max-content 1fr;
+}
+.testimonials-grid__card-header__avatar {
+  margin-inline-end: 17px;
+  border-radius: 100%;
+  grid-row: span 2;
+}
+.testimonials-grid__card-header__name {
+  /* preset-2 */
+  font-size: var(--fs-preset-2-3);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-110);
+  align-self: end;
+  margin-block-end: var(--spacing-50);
+}
+.testimonials-grid__card-header__role {
+  /* preset 4 */
+  font-size: var(--fs-preset-4);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-110);
+  align-self: start;
+
+}
+
+.testimonials-grid__card-summary {
+  /* preset 1 */
+  font-size: var(--fs-preset-1);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-120);
+}
+.testimonials-grid__card-story {
+  /* preset 3 */
+  font-size: var(--fs-preset-2-3);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-140);
+}
+
+/* Personalized */
+
+/* 1st Card */
+.testimonials-grid__card:first-child {
+  background-color: var(--clr-primary-purple-500);
+}
+
+.testimonials-grid__card:first-child .testimonials-grid__card-header__name,
+.testimonials-grid__card:first-child .testimonials-grid__card-summary {
+  color: var(--clr-basic-white);
+}
+
+.testimonials-grid__card:first-child .testimonials-grid__card-header__role,
+.testimonials-grid__card:first-child .testimonials-grid__card-story {
+  color: var(--clr-primary-purple-50);
+}
+
+/* 2nd Card */
+.testimonials-grid__card:nth-child(2) {
+  background-color: var(--clr-neutral-grey-500);
+}
+
+.testimonials-grid__card:nth-child(2) .testimonials-grid__card-header__name,
+.testimonials-grid__card:nth-child(2) .testimonials-grid__card-summary {
+  color: var(--clr-basic-white);
+}
+
+.testimonials-grid__card:nth-child(2) .testimonials-grid__card-header__role {
+  color: var(--clr-neutral-grey-300);
+}
+.testimonials-grid__card:nth-child(2) .testimonials-grid__card-story {
+  color: var(--clr-neutral-grey-100);
+}
+
+/* 3 & 5 Cards */
+.testimonials-grid__card:nth-child(3),
+.testimonials-grid__card:nth-child(5) {
+  background-color: var(--clr-basic-white);
+}
+
+.testimonials-grid__card:nth-child(3) .testimonials-grid__card-header__name,
+.testimonials-grid__card:nth-child(3) .testimonials-grid__card-summary,
+.testimonials-grid__card:nth-child(5) .testimonials-grid__card-header__name,
+.testimonials-grid__card:nth-child(5) .testimonials-grid__card-summary {
+  color: var(--clr-neutral-grey-500);
+}
+.testimonials-grid__card:nth-child(5) .testimonials-grid__card-header__role {
+  color: var(--clr-neutral-grey-300);
+}
+.testimonials-grid__card:nth-child(3) .testimonials-grid__card-header__role,
+.testimonials-grid__card:nth-child(3) .testimonials-grid__card-story,
+.testimonials-grid__card:nth-child(5) .testimonials-grid__card-story {
+  color: var(--clr-neutral-grey-400);
+}
+
+/* 4 Card */
+.testimonials-grid__card:nth-child(4) {
+  background-color: var(--clr-dark-blue);
+}
+.testimonials-grid__card:nth-child(4) .testimonials-grid__card-header__name,
+.testimonials-grid__card:nth-child(4) .testimonials-grid__card-header__role {
+  color: var(--clr-basic-white);
+}
+.testimonials-grid__card:nth-child(4) .testimonials-grid__card-summary {
+  color: var(--clr-neutral-grey-200);
+}
+.testimonials-grid__card:nth-child(4) .testimonials-grid__card-story {
+  color: var(--clr-neutral-grey-100);
+}
+/* Avatar Borders */
+.testimonials-grid__card:first-child .testimonials-grid__card-header__avatar {
+  border: 2px solid #a775f1;
+}
+.testimonials-grid__card:nth-child(4) .testimonials-grid__card-header__avatar {
+  border: 2px solid var(--clr-primary-purple-500);
+}
+
+
+@media (min-width: 48rem) {
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .testimonials-grid__card:first-child, 
+    .testimonials-grid__card:nth-child(4),
+    .testimonials-grid__card:nth-child(5) {
+        grid-column: span 2;
+    }
+}
+@media (min-width: 90rem) {
+    .testimonials-grid {
+        padding: 10rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .testimonials-grid__card {
+        height: 100%;
+        place-content: start;
+    }
+    .testimonials-grid__card:nth-child(5) {
+        grid-column: 4 /-1;
+        grid-row: 1 / 4;
+        align-self: start;
+        height: calc(100% - var(--spacing-400));
+    }
+}
