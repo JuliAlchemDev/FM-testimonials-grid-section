@@ -1,28 +1,50 @@
+# Frontend Mentor - Testimonials grid section solution
+
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
+
 ### Design screenshots
 
 #### Desktop 🖥️
 ![desktop-design](./assets/design-views/desktop.png)
 #### Tablet 💻
-![tablet-active](./assets/design-views/tablet-active.png)
+![tablet-active](./assets/design-views/tablet.png)
 #### Mobile 📱
 ![mobile-design](./assets/design-views/mobile.png)
 
 ### Links
 
-- Solution URL: [GitHub]()
+- Solution URL: [GitHub](https://github.com/JuliAlchemDev/FM-testimonials-grid-section)
 - Live Site URL: [GitHub Pages]()
 
 ## My process
-- download fonts, set up custom props based on style guide
--
+1. Project setup
+    - Initialized the project with a React starter kit.
+    - Created the initial project structure and committed the first files.
+2. Data and assets preparation
+    - Organized testimonial images and created testimonials-data.json to store content.
+    - Ensured semantic HTML structure using BEM methodology.
+3. Component development
+    - Rendered testimonials dynamically in React functional components.
+    - Integrated images and applied semantic markup for accessibility.
+4. Responsive design and styling
+    - Set up responsive layout using CSS Grid.
+    - Applied mobile-first workflow and media queries to match Figma designs.
+5. Refactoring and utility classes
+    - Extracted repeated styles into utility classes in styles.css.
+    - Loaded dynamic card styles from card-styles.json to reduce duplication and enable style variants.
 
 ### What I learned
--
+- Dynamically applying styles from **JSON** in React components.
+- Efficiently using **utility classes** to reduce CSS duplication.
+- Managing state and **data fetching** in React functional components.
+- Structuring a project for **scalable** and **maintainable** code.
+
+
 ### Built with
 
 - **React** (Functional Components, Hooks: `useState`, `useEffect`)
 - **Semantic HTML5**
-- **CSS Grid** and **Flexbox**
+- **CSS Grid** 
 - **CSS custom properties**
 - **Mobile-first workflow**
 - **BEM methodology**

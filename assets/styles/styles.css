@@ -1,8 +1,8 @@
 body {
   background-color: #f6f5f6;
-  margin: 2rem;
 }
 .testimonials-grid {
+  margin: 2rem;
   --grid-gap: var(--spacing-400);
   display: grid;
   place-items: center;
@@ -11,19 +11,21 @@ body {
   letter-spacing: var(--ls-none);
 }
 /*  General */
+
 .testimonials-grid__card {
   --card-gap: var(--spacing-200);
-
+  --card-padding: var(--spacing-400);
   background-color: var(--clr-neutral-grey-500);
-  padding: var(--spacing-400); /*32px*/
+  padding: var(--card-padding); /*32px*/
 
   display: grid;
   gap: var(--card-gap);
   text-align: start;
-  border-radius: 8px;
-
+  border-radius: 0.5rem; /* 8px */
   height: 100%;
   place-content: start;
+    align-items: stretch;
+
 
   /* Shadow */
 
@@ -33,7 +35,7 @@ body {
 .testimonials-grid__card-header {
   display: grid;
   align-items: center;
-
+  width: 100%;
   grid-template-columns: max-content 1fr;
 }
 .testimonials-grid__card-header__avatar {
@@ -59,6 +61,7 @@ body {
 
 .testimonials-grid__card-summary {
   /* preset 1 */
+
   font-size: var(--fs-preset-1);
   font-weight: var(--fw-semibold);
   line-height: var(--lh-120);
@@ -68,6 +71,9 @@ body {
   font-size: var(--fs-preset-2-3);
   font-weight: var(--fw-medium);
   line-height: var(--lh-140);
+}
+.testimonials-grid__card.bg-white:last-of-type .testimonials-grid__card-header__role {
+  color: var(--clr-neutral-grey-300)
 }
 
 /* Utility */
@@ -115,25 +121,36 @@ body {
 @media (min-width: 48rem) {
   .testimonials-grid {
     margin: 7rem 5rem;
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .testimonials-grid__card:first-child,
-  .testimonials-grid__card:nth-child(4),
-  .testimonials-grid__card:nth-child(5) {
+  .testimonials-grid__card.bg-purple,
+  .testimonials-grid__card.bg-dark-blue,
+  .testimonials-grid__card.bg-white:last-of-type {
     grid-column: span 2;
   }
+  .testimonials-grid__card.bg-purple {
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-x: 75%;
+  }
 }
+
 @media (min-width: 90rem) {
   .testimonials-grid {
-    padding: 10rem;
+    padding: 8rem;
     grid-template-columns: repeat(4, 1fr);
+   
   }
-
-  .testimonials-grid__card:nth-child(5) {
-    grid-column: 4 /-1;
+  .testimonials-grid__card.bg-purple {
+    background-position-x: 85%;
+  }
+  .testimonials-grid__card.bg-white:last-of-type {
+    grid-column: 4 / -1;
     grid-row: 1 / 4;
     align-self: start;
     height: calc(100% - var(--spacing-400));
   }
+  
 }
