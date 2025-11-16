@@ -1,0 +1,36 @@
+{
+    "purple": {
+        "card": "bg-purple",
+        "name": "text-white",
+        "role": "text-purple",
+        "summary": "text-white",
+        "story": "text-purple",
+        "avatar": "border-purple"
+
+    },
+    "grey": {
+        "card": "bg-grey",
+        "name": "text-white",
+        "role": "text-grey-300",
+        "summary": "text-white",
+        "story": "text-grey-100"
+
+    },
+    "dark-blue": {
+        "card": "bg-dark-blue",
+        "name": "text-white",
+        "role": "text-white",
+        "summary": "text-grey-200",
+        "story": "text-grey-100",
+        "avatar": "border-purple-500"
+
+        },
+      "white":  {
+        "card": "bg-white",
+        "name": "text-grey-500",
+        "role": "text-grey-400",
+        "summary": "text-grey-500",
+        "story": "text-grey-400"
+        }
+
+}
